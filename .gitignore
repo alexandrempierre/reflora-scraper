@@ -1,6 +1,6 @@
 
-# Created by https://www.toptal.com/developers/gitignore/api/python,vim,visualstudiocode,git,linux
-# Edit at https://www.toptal.com/developers/gitignore?templates=python,vim,visualstudiocode,git,linux
+# Created by https://www.toptal.com/developers/gitignore/api/python,venv,visualstudiocode,vim,git,linux
+# Edit at https://www.toptal.com/developers/gitignore?templates=python,venv,visualstudiocode,vim,git,linux
 
 ### Git ###
 # Created by git for backups. To disable backups in Git:
@@ -172,6 +172,18 @@ dmypy.json
 # Cython debug symbols
 cython_debug/
 
+### venv ###
+# Virtualenv
+# http://iamzed.com/2009/05/07/a-primer-on-virtualenv/
+[Bb]in
+[Ii]nclude
+[Ll]ib
+[Ll]ib64
+[Ll]ocal
+[Ss]cripts
+pyvenv.cfg
+pip-selfcheck.json
+
 ### Vim ###
 # Swap
 [._]*.s[a-v][a-z]
@@ -211,4 +223,4 @@ tags
 # Support for Project snippet scope
 !.vscode/*.code-snippets
 
-# End of https://www.toptal.com/developers/gitignore/api/python,vim,visualstudiocode,git,linux
+# End of https://www.toptal.com/developers/gitignore/api/python,venv,visualstudiocode,vim,git,linux
