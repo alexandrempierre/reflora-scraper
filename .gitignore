@@ -224,3 +224,4 @@ tags
 !.vscode/*.code-snippets
 
 # End of https://www.toptal.com/developers/gitignore/api/python,venv,visualstudiocode,vim,git,linux
+data/*

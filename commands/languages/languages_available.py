@@ -1,9 +1,14 @@
-'''find_languages module
+'''languages_available module
+
+Module containing the code corresponding to languages-available subcommand.
 '''
 
 
 __all__ = ['languages_available', 'language_name']
 __author__ = 'Alexandre Pierre'
+
+
+import json
 
 
 LANGUAGES = {
@@ -26,3 +31,8 @@ def languages_available(soup):
         lambda li: li.getText().strip(),
         soup.find('ul', {'class': 'nav idioma'}).find_all(
             'li', {'class': 'submenu'}))
+
+def save(filename, *values):
+    ''' '''
+    with open(filename, 'w') as file_ptr:
+        json.dump([{'lingua': value.lower()} for value in values], file_ptr)
