@@ -8,7 +8,7 @@ __all__ = ['languages_available', 'language_name', 'save']
 __author__ = 'Alexandre Pierre'
 
 
-import json
+import os
 
 
 LANGUAGES = {
@@ -35,4 +35,5 @@ def languages_available(soup):
 def save(filename, *languages):
     '''Save the languages passed as arguments.'''
     with open(filename, 'w') as file_ptr:
-        json.dump([{'lingua': lang.lower()} for lang in languages], file_ptr)
+        file_ptr.write('\n'.join(map(lambda s: s.lower(), languages)))
+    return os.path.isfile(filename)
